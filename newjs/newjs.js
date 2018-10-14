@@ -1,4 +1,4 @@
-//zad1
+//zad1.1
 
 function tabela1() {
     var tabela = document.createElement('table');
@@ -41,8 +41,47 @@ console.log(ar);
 document.getElementById("tabl1").removeChild(document.querySelector("table"));
 document.getElementById("tabl1").appendChild(tab);
 }
+//zad1.2
+function tabela2() {
+    var tabela = document.createElement('table');    
+    for(var i=0; i<10; i++){
+        var row=tabela.insertRow();
+        for(var j=0; j<10; j++){
+        var cell = row.insertCell();
+        
+    }
+}
 
-//zad2
+console.log(tabela);  
+    document.getElementById("tabl2").appendChild(tabela);
+    
+}
+function wyptab2() {
+    var ar=[];    
+var tab=document.createElement('table');
+for(var i=1; i<11; i++){
+    var row=tab.insertRow();
+    for(var j=1; j<11; j++){
+        var cell = row.insertCell();
+        
+        for(var k=1; k<11; k++){
+        if(i==k){
+            ar[j]=(j+k*10)-10;
+            cell.innerHTML=ar[j];
+            
+        }
+    }
+        
+}
+       
+}
+
+console.log(tab);
+console.log(ar);
+document.getElementById("tabl2").removeChild(document.querySelector("table"));
+document.getElementById("tabl2").appendChild(tab);
+}
+//zad1.3
 function tabela3() {
     var tabela = document.createElement('table');
     var wiersze=parseInt(document.getElementById("liczbaw").value);
