@@ -43,18 +43,46 @@ document.getElementById("tabl1").appendChild(tab);
 }
 
 //zad2
-function tabela2() {
+function tabela3() {
     var tabela = document.createElement('table');
-    
-    for(var i=0; i<10; i++){
+    var wiersze=parseInt(document.getElementById("liczbaw").value);
+    var kolumny=parseInt(document.getElementById("liczbak").value);
+    for(var i=0; i<wiersze; i++){
         var row=tabela.insertRow();
-        for(var j=0; j<10; j++){
+        for(var j=0; j<kolumny; j++){
         var cell = row.insertCell();
         
     }
 }
 
 console.log(tabela);  
-    document.getElementById("tabl2").appendChild(tabela);
+    document.getElementById("tabl3").appendChild(tabela);
     
+}
+function wyptab3() {
+    var ar=[];
+    var wiersze=parseInt(document.getElementById("liczbaw").value);
+    var kolumny=parseInt(document.getElementById("liczbak").value);
+var tab=document.createElement('table');
+for(var i=1; i<wiersze+1; i++){
+    var row=tab.insertRow();
+    for(var j=1; j<kolumny+1; j++){
+        var cell = row.insertCell();
+        
+        for(var k=1; k<kolumny+wiersze; k++){
+        if(i==k){
+            ar[j]=(j+k*kolumny)-kolumny;
+            cell.innerHTML=ar[j];
+            
+        }
+    }
+        
+}
+       
+}
+
+console.log(tab);
+console.log(ar);
+document.getElementById("tabl3").removeChild(document.querySelector("table"));
+document.getElementById("tabl3").appendChild(tab);
 }
