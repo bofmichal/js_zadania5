@@ -41,14 +41,23 @@ ją kolejnymi liczbami całkowitymi (wypełniając kolumnami).</br>
         <input type="button" onclick="tabela3()" value="stworz tabelę">
         <input type="button" onclick="wyptab3()" value="wypełnij tabelę">
     </div>
-    <div class="zadania">
-    2.	Napisz funkcję, która przyjmuje jako parametr javascriptową tablicę, a następnie tworzy na jej podstawie tabelę (jednokolumnową).
-o	Przygotuj interfejs, zawierający:
-	dwa przyciski do sortowania zawartości tabeli: "rosnąco" i "malejąco",
-	trzy przyciski do filtrowania zawartości tabeli: "parzyste", "nieparzyste" oraz "wszystkie",
-	każde kliknięcie powinno czyścić zawartość tabeli i wypełniać ją na nowo.
-o	Dodaj możliwość włączenia widoku dwukolumnowego (połowa zawartości tablicy trafia do lewej kolumny, a połowa do prawej).
-	Zmodyfikuj program, aby pozwalał na tworzenie tabeli na podstawie tablicy obiektów (o następującej strukturze: {id: 743, imię: "Jan", nazwisko: "Kowalski", username: "kowal", admin: true})
+    <div id="ogarniaj" class="zadania">
+    2.	Napisz funkcję, która przyjmuje jako parametr javascriptową tablicę, a następnie tworzy na jej 
+    podstawie tabelę (jednokolumnową).</br>
+o	Przygotuj interfejs, zawierający:</br>
+	dwa przyciski do sortowania zawartości tabeli: "rosnąco" i "malejąco",</br>
+	trzy przyciski do filtrowania zawartości tabeli: "parzyste", "nieparzyste" oraz "wszystkie",</br>
+	każde kliknięcie powinno czyścić zawartość tabeli i wypełniać ją na nowo.</br>
+o	Dodaj możliwość włączenia widoku dwukolumnowego (połowa zawartości tablicy trafia do lewej kolumny,</br> 
+a połowa do prawej).</br>
+    Zmodyfikuj program, aby pozwalał na tworzenie tabeli na podstawie tablicy obiektów (o następującej 
+    strukturze: {id: 743, imię: "Jan", nazwisko: "Kowalski", username: "kowal", admin: true})
+    <p>Tablica:<span id="tablica1"></span></p>
+    <input type="button" onclick="tablica1()" value="stworz tablicę">
+    <p>Tabela 2.1:<span id="tabl21"></span></p>
+    <input type="button" onclick="tabela21()" value="stworz tabelę"></br>
+    <input type="button" onclick="sortr()" value="sortuj rosnąco"></br>
+    <input type="button" onclick="sortm()" value="sortuj malejąco"></br>
 </div>
     <script type="text/javascript" src="newjs/newjs.js"></script>
 </body>

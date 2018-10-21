@@ -125,3 +125,88 @@ console.log(ar);
 document.getElementById("tabl3").removeChild(document.querySelector("table"));
 document.getElementById("tabl3").appendChild(tab);
 }
+//zad 2.1
+var ara=[];
+function tablica1() {
+    //var ar=[];
+    for (var i = 0; i < 20; ++i) {
+        
+        ara[i] =(Math.floor(Math.random() * 10) + 1);
+    }
+    document.getElementById("tablica1").innerHTML = ara;
+
+}
+function tabela21() {
+    var tabela = document.createElement('table');
+    var wiersze=ara.length;
+    for(var i=0; i<wiersze; i++){
+        var row=tabela.insertRow();
+        for(var j=0; j<1; j++){
+        var cell = row.insertCell();
+        cell.innerHTML=ara[i];
+    }
+}
+
+console.log(tabela);  
+    document.getElementById("tabl21").appendChild(tabela);
+    
+}
+function sortr() {
+    var mara=ara;
+    var zmiana;
+    do {
+    zmiana = false;
+    for (var i = 0; i < mara.length - 1; ++i) {
+    if (mara[i] > mara[i + 1]) {
+    var tmp = mara[i];
+    mara[i] = mara[i + 1];
+    mara[i + 1] = tmp;
+    zmiana = true;
+    }
+    }
+    } while (zmiana)
+    var tabela = document.createElement('table');
+    var wiersze=mara.length;
+    for(var i=0; i<wiersze; i++){
+        var row=tabela.insertRow();
+        for(var j=0; j<1; j++){
+        var cell = row.insertCell();
+        cell.innerHTML=mara[i];
+    }
+}
+console.log(mara);
+console.log(tabela); 
+document.getElementById("tabl21").removeChild(document.querySelector("table")); 
+    document.getElementById("tabl21").appendChild(tabela);
+    
+}
+function sortm() {
+    var rara=ara;
+    var zmiana;
+    do {
+    zmiana = false;
+    for (var i = 0; i < rara.length - 1; ++i) {
+    if (rara[i] < rara[i + 1]) {
+    var tmp = rara[i];
+    rara[i] = rara[i + 1];
+    rara[i + 1] = tmp;
+    zmiana = true;
+    }
+    }
+    } while (zmiana)
+    var tabela = document.createElement('table');
+    var wiersze=rara.length;
+    for(var i=0; i<wiersze; i++){
+        var row=tabela.insertRow();
+        for(var j=0; j<1; j++){
+        var cell = row.insertCell();
+        cell.innerHTML=rara[i];
+    }
+}
+console.log(rara);
+console.log(tabela); 
+document.getElementById("tabl21").removeChild(document.querySelector("table")); 
+    document.getElementById("tabl21").appendChild(tabela);
+    
+}
+//zad 2.2
