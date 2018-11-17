@@ -210,3 +210,72 @@ document.getElementById("tabl21").removeChild(document.querySelector("table"));
     
 }
 //zad 2.2
+function parzyste() {
+    var mara=ara;
+    var qqq=[];
+    for (var i = 0; i < mara.length ; ++i) {
+    if (mara[i]%2==0) {
+    qqq[i]=mara[i];    
+    }
+    else{
+        qqq[i]=null;
+    }
+    }
+    
+    var tabela = document.createElement('table');
+    var wiersze=mara.length;
+    for(var i=0; i<wiersze; i++){
+        var row=tabela.insertRow();
+        for(var j=0; j<1; j++){
+        var cell = row.insertCell();
+        cell.innerHTML=qqq[i];
+    }
+}
+console.log(mara);
+console.log(tabela); 
+document.getElementById("tabl21").removeChild(document.querySelector("table")); 
+    document.getElementById("tabl21").appendChild(tabela);
+    
+}
+function nieparzyste() {
+    var wara=ara;
+    var qqq=[];
+    for (var i = 0; i < wara.length ; ++i) {
+    if (wara[i]%2!=0) {
+    qqq[i]=wara[i];    
+    }
+    else{
+        qqq[i]=null;
+    }
+    }
+    
+    var tabela = document.createElement('table');
+    var wiersze=wara.length;
+    for(var i=0; i<wiersze; i++){
+        var row=tabela.insertRow();
+        for(var j=0; j<1; j++){
+        var cell = row.insertCell();
+        cell.innerHTML=qqq[i];
+    }
+}
+console.log(wara);
+console.log(tabela); 
+document.getElementById("tabl21").removeChild(document.querySelector("table")); 
+    document.getElementById("tabl21").appendChild(tabela);
+    
+}
+function wszystkie() {
+    var tabela = document.createElement('table');
+    var wiersze=ara.length;
+    for(var i=0; i<wiersze; i++){
+        var row=tabela.insertRow();
+        for(var j=0; j<1; j++){
+        var cell = row.insertCell();
+        cell.innerHTML=ara[i];
+    }
+}
+
+console.log(tabela);  
+document.getElementById("tabl21").removeChild(document.querySelector("table"));
+    document.getElementById("tabl21").appendChild(tabela);
+}
