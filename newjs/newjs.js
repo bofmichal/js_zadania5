@@ -65,9 +65,9 @@ for(var i=1; i<11; i++){
         var cell = row.insertCell();
         
         for(var k=1; k<11; k++){
-        if(i==k){
-            ar[j]=(j+k*10)-10;
-            cell.innerHTML=ar[j];
+        if(j==k){
+            ar[i]=(i+k*10)-10;
+            cell.innerHTML=ar[i];
             
         }
     }
@@ -278,4 +278,31 @@ function wszystkie() {
 console.log(tabela);  
 document.getElementById("tabl21").removeChild(document.querySelector("table"));
     document.getElementById("tabl21").appendChild(tabela);
+}
+
+//zad2.3dwie kolumny
+
+function dwie_kolumny() {
+    var miara=ara;
+    var ar=[];
+    var tabela = document.createElement('table');
+    var wiersze=miara.length;
+    for(var i=0; i<10; i++){
+        var row=tabela.insertRow();
+        for(var j=0; j<2; j++){
+        var cell = row.insertCell();
+        for(var k=0; k<21; k++){
+            if(j==k){
+                ar[i]=miara[i+(10*j)];
+                cell.innerHTML=ar[i];
+                
+            }
+        }
+    }
+}
+console.log(miara);
+console.log(tabela); 
+document.getElementById("tabl21").removeChild(document.querySelector("table")); 
+    document.getElementById("tabl21").appendChild(tabela);
+    
 }
