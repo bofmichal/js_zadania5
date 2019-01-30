@@ -306,3 +306,39 @@ document.getElementById("tabl21").removeChild(document.querySelector("table"));
     document.getElementById("tabl21").appendChild(tabela);
     
 }
+//zad3
+var kara=["id", "743", "imię", "Jan", "nazwisko", "Kowalski", "username", "kowal", "admin", "true"];
+function tablica2() {
+    
+    document.getElementById("tablica2").innerHTML = kara;
+
+}
+function tabela31() {
+    var tabela = document.createElement('table');
+    var wiersze=kara.length;
+    var ar=[];
+    for(var i=0; i<wiersze; i+=2){
+        var row=tabela.insertRow();
+        for(var j=0; j<2; j++){
+        var cell = row.insertCell();        
+        cell.innerHTML=kara[i+j];
+    }
+}
+
+/*for(var i=0; i<kara.length; i++){
+    var row=tabela.insertRow();
+    for(var j=0; j<2; j++){
+    var cell = row.insertCell();
+    for(var k=0; k<kara.length; k++){
+        if(j==k){
+            ar[i]=kara[i];
+            cell.innerHTML=ar[i];
+            
+        }
+    }
+}
+}*/
+console.log(tabela);  
+document.getElementById("tabl31").appendChild(tabela);
+
+}
